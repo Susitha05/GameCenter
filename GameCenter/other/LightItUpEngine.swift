@@ -9,7 +9,7 @@ final class LightItUpEngine: ObservableObject {
     @Published var cards: [Card] = []
     @Published var level: GameLevel = .l1
     @Published var score: Int = 0
-    @Published var timeRemaining: Double = Self.roundLength
+    @Published var timeRemaining: Double = LightItUpEngine.roundLength
     @Published var isRunning: Bool = false
     @Published var isGameOver: Bool = false
     @Published var showLevelUpFlash: Bool = false
@@ -38,7 +38,7 @@ final class LightItUpEngine: ObservableObject {
         setupCards(for: .l1)
 
         roundTimer = Timer.scheduledTimer(withTimeInterval: tickInterval, repeats: true) { [weak self] _ in
-            Task { @MainActor in self?.tickRound() }
+            self?.tickRound()
         }
         restartLightTimer()
     }
@@ -100,7 +100,7 @@ final class LightItUpEngine: ObservableObject {
     private func restartLightTimer() {
         lightTimer?.invalidate()
         lightTimer = Timer.scheduledTimer(withTimeInterval: level.litWindow, repeats: true) { [weak self] _ in
-            Task { @MainActor in self?.cycleLights() }
+            self?.cycleLights()
         }
         cycleLights()
     }
