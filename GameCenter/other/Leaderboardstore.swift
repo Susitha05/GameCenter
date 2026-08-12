@@ -1,7 +1,8 @@
 import SwiftUI
+import CoreLocation
 
-/// Persists Quiz Rush leaderboard entries to `UserDefaults` as JSON.
-/// Local storage only — scores live on this device.
+/// Persists Quiz Rush leaderboard entries (name + score + optional location)
+/// to UserDefaults as JSON. Local storage only.
 @MainActor
 final class LeaderboardStore: ObservableObject {
     static let shared = LeaderboardStore()
@@ -15,13 +16,19 @@ final class LeaderboardStore: ObservableObject {
         load()
     }
 
-    /// Adds a new score. Name is trimmed and capped so it can't blow out the
-    /// leaderboard layout; falls back to "Player" if left blank.
+    /// Adds a new score, tagging it with whatever location LocationService
+    /// currently has (if any).
     func addEntry(name: String, score: Int) {
         let trimmed = name.trimmingCharacters(in: .whitespacesAndNewlines)
         let finalName = trimmed.isEmpty ? "Player" : String(trimmed.prefix(20))
+        let coordinate = LocationService.shared.coordinateForSession
 
-        entries.append(LeaderboardEntry(name: finalName, score: score))
+        entries.append(LeaderboardEntry(
+            name: finalName,
+            score: score,
+            latitude: coordinate?.latitude,
+            longitude: coordinate?.longitude
+        ))
         trimIfNeeded()
         save()
     }
@@ -34,8 +41,6 @@ final class LeaderboardStore: ObservableObject {
         entries.removeAll()
         save()
     }
-
-    // MARK: - Private
 
     private func trimIfNeeded() {
         guard entries.count > maxStoredEntries else { return }

@@ -7,14 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D70079E7300B074A00411DBB /* Locationservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70079E6300B074A00411DBB /* Locationservice.swift */; };
+		D70079E9300B07AC00411DBB /* Notificationservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70079E8300B07AC00411DBB /* Notificationservice.swift */; };
+		D70079EC300B081900411DBB /* Resultview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70079EB300B081900411DBB /* Resultview.swift */; };
+		D70079EE300B084200411DBB /* Scorebadge .swift in Sources */ = {isa = PBXBuildFile; fileRef = D70079ED300B084200411DBB /* Scorebadge .swift */; };
+		D70079F1300B08D500411DBB /* Statsvm.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70079F0300B08D500411DBB /* Statsvm.swift */; };
+		D788EAD6301366F200256874 /*  StatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D788EAD5301366F200256874 /*  StatsViewModel.swift */; };
+		D79528A5301B42E200BD87D7 /* Scoreboardview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79528A4301B42E200BD87D7 /* Scoreboardview.swift */; };
+		D796FB48300A4F2B002F7AE4 /* LightUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D796FB47300A4F2B002F7AE4 /* LightUp.swift */; };
+		D796FB4B300A5A80002F7AE4 /* LightItUpEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D796FB4A300A5A80002F7AE4 /* LightItUpEngine.swift */; };
+		D796FB4D300A5B17002F7AE4 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = D796FB4C300A5B17002F7AE4 /* Card.swift */; };
+		D796FB4F300A5B52002F7AE4 /* Gamelevel .swift in Sources */ = {isa = PBXBuildFile; fileRef = D796FB4E300A5B52002F7AE4 /* Gamelevel .swift */; };
+		D796FB51300A7201002F7AE4 /* QuizRush.swift in Sources */ = {isa = PBXBuildFile; fileRef = D796FB50300A7201002F7AE4 /* QuizRush.swift */; };
+		D796FB54300AFB77002F7AE4 /* Quizviewmodel .swift in Sources */ = {isa = PBXBuildFile; fileRef = D796FB53300AFB77002F7AE4 /* Quizviewmodel .swift */; };
+		D796FB56300AFBAC002F7AE4 /* Triviaservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D796FB55300AFBAC002F7AE4 /* Triviaservice.swift */; };
+		D796FB58300AFBFB002F7AE4 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = D796FB57300AFBFB002F7AE4 /* Question.swift */; };
+		D796FB5A300B003A002F7AE4 /* Leaderboardentry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D796FB59300B003A002F7AE4 /* Leaderboardentry.swift */; };
+		D796FB5C300B0062002F7AE4 /* Leaderboardstore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D796FB5B300B0062002F7AE4 /* Leaderboardstore.swift */; };
+		D796FB5E300B009B002F7AE4 /* Roundendview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D796FB5D300B009B002F7AE4 /* Roundendview.swift */; };
+		D796FB60300B00D6002F7AE4 /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D796FB5F300B00D6002F7AE4 /* LeaderboardView.swift */; };
+		D796FB63300B0500002F7AE4 /* Maptab.swift in Sources */ = {isa = PBXBuildFile; fileRef = D796FB62300B0500002F7AE4 /* Maptab.swift */; };
+		D796FB65300B052A002F7AE4 /* Statstab.swift in Sources */ = {isa = PBXBuildFile; fileRef = D796FB64300B052A002F7AE4 /* Statstab.swift */; };
+		D796FB67300B054F002F7AE4 /* Settingstab .swift in Sources */ = {isa = PBXBuildFile; fileRef = D796FB66300B054F002F7AE4 /* Settingstab .swift */; };
+		D796FB69300B05D7002F7AE4 /* Gamemode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D796FB68300B05D7002F7AE4 /* Gamemode.swift */; };
+		D796FB6B300B05FD002F7AE4 /* Gamesession.swift in Sources */ = {isa = PBXBuildFile; fileRef = D796FB6A300B05FD002F7AE4 /* Gamesession.swift */; };
+		D796FB6D300B06A7002F7AE4 /* Sessionstore .swift in Sources */ = {isa = PBXBuildFile; fileRef = D796FB6C300B06A7002F7AE4 /* Sessionstore .swift */; };
+		D7A95B6630133928004C0C2A /* Lightuphistoryview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A95B6530133928004C0C2A /* Lightuphistoryview.swift */; };
+		D7A95B6830133F33004C0C2A /* Tapfrenzyhistoryview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A95B6730133F33004C0C2A /* Tapfrenzyhistoryview.swift */; };
+		D7AE427C30091D4100CFEF09 /* TapFrenzy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AE427B30091D4100CFEF09 /* TapFrenzy.swift */; };
 		D7ED5E6230014E050008318A /* GameCenterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ED5E6130014E050008318A /* GameCenterApp.swift */; };
 		D7ED5E6430014E050008318A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ED5E6330014E050008318A /* ContentView.swift */; };
-		D7ED5E6630014E050008318A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ED5E6530014E050008318A /* Item.swift */; };
-		D7ED5E6830014E070008318A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7ED5E6730014E070008318A /* Assets.xcassets */; };
 		D7ED5E6B30014E070008318A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7ED5E6A30014E070008318A /* Preview Assets.xcassets */; };
 		D7ED5E7730014E070008318A /* GameCenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ED5E7630014E070008318A /* GameCenterTests.swift */; };
 		D7ED5E8130014E070008318A /* GameCenterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ED5E8030014E070008318A /* GameCenterUITests.swift */; };
 		D7ED5E8330014E070008318A /* GameCenterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ED5E8230014E070008318A /* GameCenterUITestsLaunchTests.swift */; };
+		D7ED5E99300252FC0008318A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7ED5E98300252FC0008318A /* Assets.xcassets */; };
+		D7ED5E9B3003716A0008318A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ED5E9A3003716A0008318A /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +63,37 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D70079E6300B074A00411DBB /* Locationservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locationservice.swift; sourceTree = "<group>"; };
+		D70079E8300B07AC00411DBB /* Notificationservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notificationservice.swift; sourceTree = "<group>"; };
+		D70079EB300B081900411DBB /* Resultview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resultview.swift; sourceTree = "<group>"; };
+		D70079ED300B084200411DBB /* Scorebadge .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scorebadge .swift"; sourceTree = "<group>"; };
+		D70079F0300B08D500411DBB /* Statsvm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statsvm.swift; sourceTree = "<group>"; };
+		D788EAD5301366F200256874 /*  StatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " StatsViewModel.swift"; sourceTree = "<group>"; };
+		D79528A4301B42E200BD87D7 /* Scoreboardview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scoreboardview.swift; sourceTree = "<group>"; };
+		D796FB47300A4F2B002F7AE4 /* LightUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightUp.swift; sourceTree = "<group>"; };
+		D796FB4A300A5A80002F7AE4 /* LightItUpEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightItUpEngine.swift; sourceTree = "<group>"; };
+		D796FB4C300A5B17002F7AE4 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		D796FB4E300A5B52002F7AE4 /* Gamelevel .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Gamelevel .swift"; sourceTree = "<group>"; };
+		D796FB50300A7201002F7AE4 /* QuizRush.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizRush.swift; sourceTree = "<group>"; };
+		D796FB53300AFB77002F7AE4 /* Quizviewmodel .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Quizviewmodel .swift"; sourceTree = "<group>"; };
+		D796FB55300AFBAC002F7AE4 /* Triviaservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triviaservice.swift; sourceTree = "<group>"; };
+		D796FB57300AFBFB002F7AE4 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		D796FB59300B003A002F7AE4 /* Leaderboardentry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leaderboardentry.swift; sourceTree = "<group>"; };
+		D796FB5B300B0062002F7AE4 /* Leaderboardstore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leaderboardstore.swift; sourceTree = "<group>"; };
+		D796FB5D300B009B002F7AE4 /* Roundendview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Roundendview.swift; sourceTree = "<group>"; };
+		D796FB5F300B00D6002F7AE4 /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
+		D796FB62300B0500002F7AE4 /* Maptab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maptab.swift; sourceTree = "<group>"; };
+		D796FB64300B052A002F7AE4 /* Statstab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statstab.swift; sourceTree = "<group>"; };
+		D796FB66300B054F002F7AE4 /* Settingstab .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Settingstab .swift"; sourceTree = "<group>"; };
+		D796FB68300B05D7002F7AE4 /* Gamemode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gamemode.swift; sourceTree = "<group>"; };
+		D796FB6A300B05FD002F7AE4 /* Gamesession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gamesession.swift; sourceTree = "<group>"; };
+		D796FB6C300B06A7002F7AE4 /* Sessionstore .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sessionstore .swift"; sourceTree = "<group>"; };
+		D7A95B6530133928004C0C2A /* Lightuphistoryview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lightuphistoryview.swift; sourceTree = "<group>"; };
+		D7A95B6730133F33004C0C2A /* Tapfrenzyhistoryview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tapfrenzyhistoryview.swift; sourceTree = "<group>"; };
+		D7AE427B30091D4100CFEF09 /* TapFrenzy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapFrenzy.swift; sourceTree = "<group>"; };
 		D7ED5E5E30014E050008318A /* GameCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7ED5E6130014E050008318A /* GameCenterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCenterApp.swift; sourceTree = "<group>"; };
 		D7ED5E6330014E050008318A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		D7ED5E6530014E050008318A /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		D7ED5E6730014E070008318A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7ED5E6A30014E070008318A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D7ED5E6C30014E070008318A /* GameCenter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GameCenter.entitlements; sourceTree = "<group>"; };
 		D7ED5E6D30014E070008318A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,6 +102,8 @@
 		D7ED5E7C30014E070008318A /* GameCenterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameCenterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7ED5E8030014E070008318A /* GameCenterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCenterUITests.swift; sourceTree = "<group>"; };
 		D7ED5E8230014E070008318A /* GameCenterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCenterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D7ED5E98300252FC0008318A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D7ED5E9A3003716A0008318A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +131,84 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D70079E5300B071000411DBB /* other */ = {
+			isa = PBXGroup;
+			children = (
+				D796FB4E300A5B52002F7AE4 /* Gamelevel .swift */,
+				D796FB4A300A5A80002F7AE4 /* LightItUpEngine.swift */,
+				D796FB5D300B009B002F7AE4 /* Roundendview.swift */,
+				D796FB59300B003A002F7AE4 /* Leaderboardentry.swift */,
+				D796FB5B300B0062002F7AE4 /* Leaderboardstore.swift */,
+				D796FB4C300A5B17002F7AE4 /* Card.swift */,
+			);
+			path = other;
+			sourceTree = "<group>";
+		};
+		D70079EA300B07ED00411DBB /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				D70079EB300B081900411DBB /* Resultview.swift */,
+				D70079ED300B084200411DBB /* Scorebadge .swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		D70079EF300B08A800411DBB /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				D70079F0300B08D500411DBB /* Statsvm.swift */,
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
+		D796FB49300A59D9002F7AE4 /* servies */ = {
+			isa = PBXGroup;
+			children = (
+				D796FB55300AFBAC002F7AE4 /* Triviaservice.swift */,
+				D70079E6300B074A00411DBB /* Locationservice.swift */,
+				D70079E8300B07AC00411DBB /* Notificationservice.swift */,
+			);
+			path = servies;
+			sourceTree = "<group>";
+		};
+		D796FB52300AFB54002F7AE4 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				D796FB53300AFB77002F7AE4 /* Quizviewmodel .swift */,
+				D796FB57300AFBFB002F7AE4 /* Question.swift */,
+				D796FB68300B05D7002F7AE4 /* Gamemode.swift */,
+				D796FB6A300B05FD002F7AE4 /* Gamesession.swift */,
+				D796FB6C300B06A7002F7AE4 /* Sessionstore .swift */,
+				D788EAD5301366F200256874 /*  StatsViewModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		D796FB61300B04E0002F7AE4 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				D796FB62300B0500002F7AE4 /* Maptab.swift */,
+				D796FB64300B052A002F7AE4 /* Statstab.swift */,
+				D796FB66300B054F002F7AE4 /* Settingstab .swift */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		D7AE427A30091D1F00CFEF09 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D796FB61300B04E0002F7AE4 /* Tabs */,
+				D7AE427B30091D4100CFEF09 /* TapFrenzy.swift */,
+				D796FB47300A4F2B002F7AE4 /* LightUp.swift */,
+				D796FB50300A7201002F7AE4 /* QuizRush.swift */,
+				D79528A4301B42E200BD87D7 /* Scoreboardview.swift */,
+				D796FB5F300B00D6002F7AE4 /* LeaderboardView.swift */,
+				D7A95B6530133928004C0C2A /* Lightuphistoryview.swift */,
+				D7A95B6730133F33004C0C2A /* Tapfrenzyhistoryview.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D7ED5E5530014E050008318A = {
 			isa = PBXGroup;
 			children = (
@@ -98,11 +232,17 @@
 		D7ED5E6030014E050008318A /* GameCenter */ = {
 			isa = PBXGroup;
 			children = (
+				D70079EF300B08A800411DBB /* VM */,
+				D70079EA300B07ED00411DBB /* Shared */,
+				D70079E5300B071000411DBB /* other */,
+				D796FB52300AFB54002F7AE4 /* model */,
+				D796FB49300A59D9002F7AE4 /* servies */,
+				D7AE427A30091D1F00CFEF09 /* View */,
 				D7ED5E6130014E050008318A /* GameCenterApp.swift */,
 				D7ED5E6330014E050008318A /* ContentView.swift */,
-				D7ED5E6530014E050008318A /* Item.swift */,
-				D7ED5E6730014E070008318A /* Assets.xcassets */,
+				D7ED5E9A3003716A0008318A /* Home.swift */,
 				D7ED5E6C30014E070008318A /* GameCenter.entitlements */,
+				D7ED5E98300252FC0008318A /* Assets.xcassets */,
 				D7ED5E6D30014E070008318A /* Info.plist */,
 				D7ED5E6930014E070008318A /* Preview Content */,
 			);
@@ -238,8 +378,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7ED5E99300252FC0008318A /* Assets.xcassets in Resources */,
 				D7ED5E6B30014E070008318A /* Preview Assets.xcassets in Resources */,
-				D7ED5E6830014E070008318A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,9 +404,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D796FB60300B00D6002F7AE4 /* LeaderboardView.swift in Sources */,
 				D7ED5E6430014E050008318A /* ContentView.swift in Sources */,
-				D7ED5E6630014E050008318A /* Item.swift in Sources */,
+				D7AE427C30091D4100CFEF09 /* TapFrenzy.swift in Sources */,
+				D796FB4D300A5B17002F7AE4 /* Card.swift in Sources */,
+				D796FB51300A7201002F7AE4 /* QuizRush.swift in Sources */,
+				D70079EE300B084200411DBB /* Scorebadge .swift in Sources */,
+				D796FB67300B054F002F7AE4 /* Settingstab .swift in Sources */,
+				D796FB56300AFBAC002F7AE4 /* Triviaservice.swift in Sources */,
+				D796FB6D300B06A7002F7AE4 /* Sessionstore .swift in Sources */,
+				D796FB4B300A5A80002F7AE4 /* LightItUpEngine.swift in Sources */,
+				D796FB69300B05D7002F7AE4 /* Gamemode.swift in Sources */,
+				D7A95B6830133F33004C0C2A /* Tapfrenzyhistoryview.swift in Sources */,
+				D796FB63300B0500002F7AE4 /* Maptab.swift in Sources */,
+				D7ED5E9B3003716A0008318A /* Home.swift in Sources */,
+				D70079E9300B07AC00411DBB /* Notificationservice.swift in Sources */,
+				D70079E7300B074A00411DBB /* Locationservice.swift in Sources */,
+				D796FB5E300B009B002F7AE4 /* Roundendview.swift in Sources */,
+				D79528A5301B42E200BD87D7 /* Scoreboardview.swift in Sources */,
+				D796FB54300AFB77002F7AE4 /* Quizviewmodel .swift in Sources */,
+				D7A95B6630133928004C0C2A /* Lightuphistoryview.swift in Sources */,
+				D796FB5A300B003A002F7AE4 /* Leaderboardentry.swift in Sources */,
+				D796FB4F300A5B52002F7AE4 /* Gamelevel .swift in Sources */,
+				D796FB6B300B05FD002F7AE4 /* Gamesession.swift in Sources */,
+				D796FB58300AFBFB002F7AE4 /* Question.swift in Sources */,
+				D788EAD6301366F200256874 /*  StatsViewModel.swift in Sources */,
+				D70079EC300B081900411DBB /* Resultview.swift in Sources */,
+				D796FB5C300B0062002F7AE4 /* Leaderboardstore.swift in Sources */,
+				D796FB48300A4F2B002F7AE4 /* LightUp.swift in Sources */,
+				D70079F1300B08D500411DBB /* Statsvm.swift in Sources */,
 				D7ED5E6230014E050008318A /* GameCenterApp.swift in Sources */,
+				D796FB65300B052A002F7AE4 /* Statstab.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,9 +599,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GameCenter/Preview Content\"";
+				DEVELOPMENT_TEAM = R666JHJ33X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GameCenter/Info.plist;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "This app uses your location to save game sessions on the map.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app uses your location to save game sessions on the map.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -461,9 +632,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GameCenter/Preview Content\"";
+				DEVELOPMENT_TEAM = R666JHJ33X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GameCenter/Info.plist;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "This app uses your location to save game sessions on the map.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app uses your location to save game sessions on the map.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

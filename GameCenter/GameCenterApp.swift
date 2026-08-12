@@ -10,23 +10,40 @@ import SwiftData
 
 @main
 struct GameCenterApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
-
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootTabView()
         }
-        .modelContainer(sharedModelContainer)
+    }
+}
+
+struct RootTabView: View {
+    var body: some View {
+        TabView {
+            NavigationStack {
+                Home()
+            }
+            .tabItem {
+                Label("Home", systemImage: "gamecontroller.fill")
+            }
+ 
+            StatsTab()
+                .tabItem {
+                    Label("Stats", systemImage: "chart.bar.fill")
+                }
+ 
+            MapTab()
+                .tabItem {
+                    Label("Map", systemImage: "map.fill")
+                }
+ 
+            SettingsTab()
+                .tabItem {
+                    Label("Settings", systemImage: "gear")
+                }
+        }
+        .onAppear {
+            LocationService.shared.requestPermission()
+        }
     }
 }

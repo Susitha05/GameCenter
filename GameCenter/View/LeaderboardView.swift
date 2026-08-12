@@ -1,102 +1,70 @@
-//
-//  QuizRushHistoryView.swift
-//  GameCenter
-//
-
 import SwiftUI
 
-struct QuizRushHistoryView: View {
-    @State private var records: [QuizRushScoreRecord] = []
-    @State private var showClearConfirmation = false
+/// Quiz Rush leaderboard: ranked list of saved scores.
+struct LeaderboardView: View {
+    @ObservedObject private var store = LeaderboardStore.shared
+    @Environment(\.dismiss) private var dismiss
 
-    private var sortedRecords: [QuizRushScoreRecord] {
-        records.sorted { $0.date > $1.date }
-    }
-
-    private var bestScore: Int {
-        records.map(\.score).max() ?? 0
-    }
-
-    private var averageScore: Int {
-        guard !records.isEmpty else { return 0 }
-        return records.map(\.score).reduce(0, +) / records.count
+    private var entries: [LeaderboardEntry] {
+        store.topEntries(limit: 20)
     }
 
     var body: some View {
         List {
-            if !records.isEmpty {
-                Section {
-                    HStack {
-                        StatColumn(value: "\(records.count)", label: "Rounds")
-                        Spacer()
-                        StatColumn(value: "\(bestScore)", label: "Best")
-                        Spacer()
-                        StatColumn(value: "\(averageScore)", label: "Average")
-                    }
-                    .padding(.vertical, 4)
-                }
-            }
-
-            if sortedRecords.isEmpty {
+            if entries.isEmpty {
                 emptyState
             } else {
-                Section("All Rounds") {
-                    ForEach(sortedRecords) { record in
-                        HStack {
-                            VStack(alignment: .leading, spacing: 2) {
-                                Text("\(record.score) points")
-                                    .font(.body.weight(.medium))
-                                Text(record.date.formatted(date: .abbreviated, time: .shortened))
-                                    .font(.caption)
-                                    .foregroundColor(.secondary)
-                            }
-                            Spacer()
-                            if record.score == bestScore {
-                                Image(systemName: "star.fill")
-                                    .foregroundColor(.yellow)
-                            }
-                        }
-                    }
+                ForEach(Array(entries.enumerated()), id: \.element.id) { index, entry in
+                    row(rank: index + 1, entry: entry)
                 }
             }
         }
-        .navigationTitle("Score History")
+        .listStyle(.insetGrouped)
+        .navigationTitle("Quiz Rush Leaderboard")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            if !records.isEmpty {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Clear", role: .destructive) {
-                        showClearConfirmation = true
-                    }
-                }
+            ToolbarItem(placement: .cancellationAction) {
+                Button("Done") { dismiss() }
             }
         }
-        .confirmationDialog(
-            "Clear all saved scores?",
-            isPresented: $showClearConfirmation,
-            titleVisibility: .visible
-        ) {
-            Button("Clear History", role: .destructive) {
-                QuizRushLocalStore.clear()
-                records = []
-            }
-            Button("Cancel", role: .cancel) {}
-        } message: {
-            Text("This removes every saved Quiz Rush score. This can't be undone.")
+    }
+
+    private func row(rank: Int, entry: LeaderboardEntry) -> some View {
+        HStack(spacing: 12) {
+            Text(rankLabel(rank))
+                .font(.headline)
+                .foregroundColor(rank <= 3 ? .orange : .secondary)
+                .frame(width: 36, alignment: .leading)
+
+            Text(entry.name)
+                .font(.body.weight(.medium))
+
+            Spacer()	
+
+            Text("\(entry.score)")
+                .font(.headline)
+                .monospacedDigit()
         }
-        .onAppear {
-            records = QuizRushLocalStore.load()
+        .padding(.vertical, 2)
+    }
+
+    private func rankLabel(_ rank: Int) -> String {
+        switch rank {
+        case 1: return "🥇"
+        case 2: return "🥈"
+        case 3: return "🥉"
+        default: return "#\(rank)"
         }
     }
 
     private var emptyState: some View {
         VStack(spacing: 8) {
-            Image(systemName: "clock.arrow.circlepath")
+            Image(systemName: "trophy")
                 .font(.system(size: 40))
                 .foregroundColor(.secondary)
             Text("No scores yet")
                 .font(.headline)
-            Text("Play a round of Quiz Rush to see it here.")
+            Text("Play a round of Quiz Rush and save your score to see it here.")
                 .font(.subheadline)
                 .foregroundColor(.secondary)
                 .multilineTextAlignment(.center)
@@ -107,18 +75,6 @@ struct QuizRushHistoryView: View {
     }
 }
 
-private struct StatColumn: View {
-    let value: String
-    let label: String
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: 4) {
-            Text(value).font(.title2.bold())
-            Text(label).font(.caption).foregroundColor(.secondary)
-        }
-    }
-}
-
 #Preview {
-    NavigationStack { QuizRushHistoryView() }
+    NavigationStack { LeaderboardView() }
 }

@@ -32,7 +32,7 @@ struct CombinedScoreRecord: Identifiable {
 }
 
 enum CombinedScoreboard {
-    static func loadAll() -> [CombinedScoreRecord] {
+    @MainActor static func loadAll() -> [CombinedScoreRecord] {
         let tapFrenzy = TapFrenzyLocalStore.load().map {
             CombinedScoreRecord(
                 id: $0.id, mode: .tapFrenzy, score: $0.score, date: $0.date,
@@ -56,7 +56,7 @@ enum CombinedScoreboard {
         return tapFrenzy + lightItUp + quizRush
     }
 
-    static func clearAll() {
+    @MainActor static func clearAll() {
         TapFrenzyLocalStore.clear()
         LightItUpLocalStore.clear()
         LeaderboardStore.shared.clearAll()
